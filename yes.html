@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      window.onload = function() {
+        // Play the video when the page is loaded
+        playVideo();
+      };
+
+      function playVideo() {
+        // Display the video element
+        var video = document.getElementById("myVideo");
+        video.style.display = "block";
+
+        // Set the loop attribute to make the video loop
+        video.setAttribute("loop", "loop");
+        video.muted = true;
+
+        // Play the video
+        video.play();
+      }
+
+      function redirectToTwitter() {
+        // Redirect to Twitter
+        window.location.href = 'https://twitter.com/archiexzzz';
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h1 class="header_text">Yayyyyyy! It's Happening!</h1>
+      </div>
+      <button class="btn" id="yesButton" onclick="redirectToTwitter()">
+        📅 Let's Fix a Date
+      </button>
+      
+
+      <video  playsinline id="myVideo" controls autoplay style="display:none; width: 100%; max-width: 600px; margin-top: 120px;">
+        <source src="video_nagin.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </body>
+</html>
